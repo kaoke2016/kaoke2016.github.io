@@ -14,15 +14,17 @@
 <meta name="author" content="kaoke2016" />
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="这个是对咪蒙体机器的实现，代码颇为粗糙，但好歹也是能跑得起来的。 思路1、收集足够多的语料，对这堆语料使用tokenize这个函数，这样就构建了一个庞大的词包，这个词包除了分好的词，还有该词的起始位置和结束位置； 2、设定一个开始词，比如“我们”，用这个开始词去遍历词包里边所有的“我们”，匹配所有结束位置，随机选择一个结束位置作为我们下一个词的开始位置，这样就匹配到“我们”的下一个词，假设匹配到的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动写咪蒙体实现">
+<meta property="og:url" content="http://yoursite.com/2020/03/19/%E8%87%AA%E5%8A%A8%E5%86%99%E5%92%AA%E8%92%99%E4%BD%93/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="这个是对咪蒙体机器的实现，代码颇为粗糙，但好歹也是能跑得起来的。 思路1、收集足够多的语料，对这堆语料使用tokenize这个函数，这样就构建了一个庞大的词包，这个词包除了分好的词，还有该词的起始位置和结束位置； 2、设定一个开始词，比如“我们”，用这个开始词去遍历词包里边所有的“我们”，匹配所有结束位置，随机选择一个结束位置作为我们下一个词的开始位置，这样就匹配到“我们”的下一个词，假设匹配到的">
+<meta property="article:published_time" content="2020-03-19T06:52:49.010Z">
+<meta property="article:modified_time" content="2020-03-19T06:50:14.000Z">
 <meta property="article:author" content="kaoke2016">
+<meta property="article:tag" content="文本生成">
 <meta name="twitter:card" content="summary">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -53,13 +55,11 @@
 
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hexo</title>
+<title>自动写咪蒙体实现 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -68,8 +68,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -259,197 +259,7 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-域名出售" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/03/19/%E5%9F%9F%E5%90%8D%E5%87%BA%E5%94%AE/" class="article-date">
-      <time datetime="2020-03-19T06:52:48.960Z" itemprop="datePublished">2020-03-19</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/19/%E5%9F%9F%E5%90%8D%E5%87%BA%E5%94%AE/">域名出售</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <center><h2>全部域名一口价</h2></center>
-<center><h2>COM域名</h2></center>
-
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>域名</th>
-<th>含义</th>
-<th>价格</th>
-<th>链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>数字</td>
-<td><a href="http://www.5888866.com" target="_blank" rel="noopener">5888866.com</a></td>
-<td>7位极品号码</td>
-<td>666元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=5888866.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.gambledog.com" target="_blank" rel="noopener">gambledog.com</a></td>
-<td>赌狗</td>
-<td>5000元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=gambledog.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.oldyes.com" target="_blank" rel="noopener">oldyes.com</a></td>
-<td>老对,o-yes</td>
-<td>1500元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=oldyes.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.naturepig.com" target="_blank" rel="noopener">naturepig.com</a></td>
-<td>自然猪、野生猪（养猪业）</td>
-<td>1500元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=naturepig.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.motherhappy.com" target="_blank" rel="noopener">motherhappy.com</a></td>
-<td>妈妈高兴、妈妈开心</td>
-<td>888元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=motherhappy.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.roommuch.com" target="_blank" rel="noopener">roommuch.com</a></td>
-<td>房多多</td>
-<td>888元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=roommuch.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.actorplan.com" target="_blank" rel="noopener">actorplan.com</a></td>
-<td>演员计划（适合演艺产业）</td>
-<td>500元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=actorplan.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.egggold.com" target="_blank" rel="noopener">egggold.com</a></td>
-<td>蛋金</td>
-<td>500元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=egggold.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.coffeejoin.com" target="_blank" rel="noopener">coffeejoin.com</a></td>
-<td>咖啡加盟</td>
-<td>199元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=coffeejoin.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>英文双拼</td>
-<td><a href="http://www.dragondown.com" target="_blank" rel="noopener">dragondown.com</a></td>
-<td>龙降、降龙</td>
-<td>99元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=dragondown.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>中文三拼</td>
-<td><a href="http://www.hongtaojian.com" target="_blank" rel="noopener">hongtaojian.com</a></td>
-<td>红桃尖</td>
-<td>199元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=hongtaojian.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>中文三拼</td>
-<td><a href="http://www.xianlexuan.com" target="_blank" rel="noopener">xianlexuan.com</a></td>
-<td>鲜乐选、先乐选、闲乐轩</td>
-<td>199元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=xianlexuan.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>中文三拼</td>
-<td><a href="http://www.haomeixin.com" target="_blank" rel="noopener">haomeixin.com</a></td>
-<td>好美新、豪美鑫</td>
-<td>99元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=haomeixin.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>中文三拼</td>
-<td><a href="http://www.zuotitong.com" target="_blank" rel="noopener">zuotitong.com</a></td>
-<td>做题通</td>
-<td>99元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=zuotitong.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-<tr>
-<td>四杂</td>
-<td><a href="http://www.5add.com" target="_blank" rel="noopener">5add.com</a></td>
-<td>5+、五家、吾家、五加</td>
-<td>399元</td>
-<td><a href="https://mi.aliyun.com/detail/online.html?domainName=5add.com&orgType=undefined&productType=2" target="_blank" rel="noopener">去购买</a></td>
-</tr>
-</tbody></table>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9F%9F%E5%90%8D/" rel="tag">域名</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2020/03/19/%E5%9F%9F%E5%90%8D%E5%87%BA%E5%94%AE/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-自动写咪蒙体" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-自动写咪蒙体" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2020/03/19/%E8%87%AA%E5%8A%A8%E5%86%99%E5%92%AA%E8%92%99%E4%BD%93/" class="article-date">
@@ -467,12 +277,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/19/%E8%87%AA%E5%8A%A8%E5%86%99%E5%92%AA%E8%92%99%E4%BD%93/">自动写咪蒙体实现</a>
+    <h1 class="article-title" itemprop="name">
+      自动写咪蒙体实现
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90/" rel="tag">文本生成</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -493,232 +314,113 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90/" rel="tag">文本生成</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-文本生成想法1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/03/19/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90%E6%83%B3%E6%B3%951/" class="article-date">
-      <time datetime="2020-03-19T06:52:48.980Z" itemprop="datePublished">2020-03-19</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/19/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90%E6%83%B3%E6%B3%951/">文本生成想法1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>文本生成，看吴军的《数学之美》有两个方向，一个是研究语法规则的，一个是统计词频的，经过十几年的斗争，语法规则派大败亏输。不过胜利的词频派在我看来就好像再说“只要动力够，门板都飞天”，需要的数据量越来越多，然后就是用那啥马尔科夫链根据一个字去猜下一个字，你要说有意义吧，它产生的文字根据几百G的文本材料，字和字之间肯定是通顺的，但能表达思想吗？肯定是不能的。但又仿佛传说中的以力证道，恐怖如斯。</p>
-<p>就好像莱特兄弟造飞机，之前没成功是因为他们没有火箭般的动力系统？力大砖飞这条路明显造不出能稳定飞行的飞机啊。靠词频生成文本也是一样的道理，还是研究语法规则吧，不过这条路崎岖难行，不知道会不会有成果。</p>
-<p>有种细胞写作法，就是写些100来字的文章片段，称为细胞，然后再把细胞组合成一个生命（文章），这个是符合朴素逻辑的，但是能不能用程序生成就难说了。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90/" rel="tag">文本生成</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-制作电子书" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/03/19/%E5%88%B6%E4%BD%9C%E7%94%B5%E5%AD%90%E4%B9%A6/" class="article-date">
-      <time datetime="2020-03-19T06:52:48.190Z" itemprop="datePublished">2020-03-19</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/19/%E5%88%B6%E4%BD%9C%E7%94%B5%E5%AD%90%E4%B9%A6/">制作电子书</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="PDF类"><a href="#PDF类" class="headerlink" title="PDF类"></a>PDF类</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">制作PDF的方法有很多，比如读书巴士之类的，打印网页成PDF，有个绿色版的PrintHtmlToPdf</span><br><span class="line">打开淘宝，搜索“打印装订”选家可以包邮的店，跟店家说下要求，发送PDF，就可以制作一本自己的书了。</span><br><span class="line">说页数，胶装，双面打印，B5（B5好像是最小的，但是比普通32开要大些），一页大约5分钱，双面可有8分。</span><br></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E5%AD%90%E4%B9%A6/" rel="tag">电子书</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2020/03/19/%E5%88%B6%E4%BD%9C%E7%94%B5%E5%AD%90%E4%B9%A6/#more">阅读全文 >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2020/03/19/%E8%87%AA%E5%8A%A8%E5%86%99%E5%92%AA%E8%92%99%E4%BD%93/">自动写咪蒙体实现</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">kaoke2016</a></p>
+        <p><span>发布时间:</span>2020-03-19, 14:52:49</p>
+        <p><span>最后更新:</span>2020-03-19, 14:50:14</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/03/19/%E8%87%AA%E5%8A%A8%E5%86%99%E5%92%AA%E8%92%99%E4%BD%93/" title="自动写咪蒙体实现">http://yoursite.com/2020/03/19/%E8%87%AA%E5%8A%A8%E5%86%99%E5%92%AA%E8%92%99%E4%BD%93/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/03/19/%E8%87%AA%E5%8A%A8%E5%86%99%E5%92%AA%E8%92%99%E4%BD%93/　　作者: kaoke2016" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
-    
-  </div>
-  
-</article>
 
 
 
-
-
-
-
-
-
-
-
-  
-    <article id="post-一个推理剧遇上无限流的例子" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/03/19/%E4%B8%80%E4%B8%AA%E6%8E%A8%E7%90%86%E5%89%A7%E9%81%87%E4%B8%8A%E6%97%A0%E9%99%90%E6%B5%81%E7%9A%84%E4%BE%8B%E5%AD%90/" class="article-date">
-      <time datetime="2020-03-19T06:52:47.650Z" itemprop="datePublished">2020-03-19</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <nav id="article-nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/19/%E4%B8%80%E4%B8%AA%E6%8E%A8%E7%90%86%E5%89%A7%E9%81%87%E4%B8%8A%E6%97%A0%E9%99%90%E6%B5%81%E7%9A%84%E4%BE%8B%E5%AD%90/">一个推理剧遇上无限流的例子</a>
-    </h1>
-  
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/03/19/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90%E6%83%B3%E6%B3%951/">
+                    文本生成想法1
+                </a>
+            </div>
+        
+    </nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>看了之前那个问题，忽然脑洞大开，遇到无限流的推理剧在死神小学生的位面也玩过一回，就在剧场版《贝克街的亡魂》之中，这一部的剧情讲的是一个觉醒了人工智能的电脑，借着测试新游戏仓的契机，把日本的富二代官二代们忽悠到虚拟世界和他玩一个游戏，失败了就全死翘，日本的明天就完了云云。这里就要引出<code>要点1：后果一定要严重，能全灭就全灭，只死一两个根本不过瘾的好么。</code></p>
-<p>这个人工智能诺亚就类似主神，他安排了5个剧情世界，而只要一人通过就能全员复活，经过慎重考虑，死神小学生选择了熟悉剧情的贝克街，<code>要点2：背景世界要熟悉而广为人知。</code>但是主神不是让你来刷分的，诺亚强制乱入剧情，发布主线任务：揭开开膛手杰克的真面目。<code>要点3：任务目标要难，BOSS又隐藏又知名最好不过了。</code>同时限制装备，小学神全身的挂B装备都不能用了，限制血量，基本受到轻伤就出局。<code>要点4：有一定限制。</code></p>
-<p>降临，剧情展开，小学生推了推眼镜，说出智者名言：“我们要借势！”结果来到贝克街发现位面主角福尔摩斯已经旅游去了。。。。坐在福尔摩斯的椅子上摆完POSS后，果断去寻找主要反派莫里亚蒂教授，<code>要点5：剧情会神展开，熟悉剧情并没什么卵用。</code>推理出线索找到教授所在，经过一场战斗后，少年侦探团领便当退场，教授提供线索，会让杰克去袭击一个公众人物，具体是谁请看明日报纸。<code>要点6：帮助不一定是辅助战斗和提供道具。</code>保护下被袭击的目标后，在追击中终于把目标锁定在同一车厢的人之中，随着一声“凶手就是你！”开启终章。</p>
-<p>值得一说的是，开膛手杰克虽然不是真实人物，但是他的冷兵器战斗力很可能排柯南位面的头把交椅。他在“火车通过隧道”这么短的时间里，生擒下能躲步枪子弹，徒手断钢刀，一脚踢断电线杆的处于战斗状态的毛利兰，还捆了起来，武力之高，匪夷所思，理论上可直接秒杀2人，但是根据剧情需要，在推理完成后他必须要说一堆废话，根据死于话多定律被小兰同归于尽了。<code>要点7：不用想着武力解决BOSS，正常状态的BOSS足以秒杀全场。</code></p>
-<p>结局之时，死神小学生对跟着他幸存下来的人说：“你其实就是诺亚吧。”完成隐藏剧情，虽然我不是很理解为什么从不踢足球就判断他被顶替了，但是反正隐藏剧情很厉害就是了。诺亚听完也乖乖自杀了。<code>要点8：埋点隐藏剧情再抖出来会让人不明觉厉，还有主神可以安排搅屎棍误导方向。</code></p>
-<p>在这场类似无限流的推理游戏中，如果不能让剧情发展下去，很可能就是灭团的结局，而时间的限制是隐藏的，不主动推理后果非常严重，线索虽多但关键就在一两步之间，并且没有以力破局的可能性。所以要想写好这种题材应该也是挺难的，但是写好了会很好看。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%BE%99%E7%A9%BA/" rel="tag">龙空</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#思路"><span class="toc-number">1.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#优化逻辑"><span class="toc-number">2.</span> <span class="toc-text">优化逻辑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文献"><span class="toc-number">4.</span> <span class="toc-text">参考文献</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
 
 
 
+    
+        <section id="comments" style="margin: 2em; padding: 2em; background: rgba(255, 255, 255, 0.5)">
+    <div id="vcomment" class="comment"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@1.3.4/dist/Valine.min.js"></script>
+    <script>
+      new Valine({
+        el: '#vcomment',
+        notify: 'false',
+        verify: 'false',
+        app_id: "wNfVCpkS7z2Wvq3KFgfD0QL6-MdYXbMMI",
+        app_key: "ve9Pwpyme7XfVe3RryOSNlkp",
+        placeholder: "Just go go",
+        avatar: "mm"
+      });
+    </script>
+</section>
+    
 
 
 
 
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
 
-  
-  
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/03/19/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90%E6%83%B3%E6%B3%951/" title="下一篇: 文本生成想法1">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/19/%E8%87%AA%E5%8A%A8%E5%86%99%E5%92%AA%E8%92%99%E4%BD%93/">自动写咪蒙体实现</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/19/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90%E6%83%B3%E6%B3%951/">文本生成想法1</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/19/%E5%9F%9F%E5%90%8D%E5%87%BA%E5%94%AE/">域名出售</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/19/%E5%88%B6%E4%BD%9C%E7%94%B5%E5%AD%90%E4%B9%A6/">制作电子书</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/19/%E4%B8%80%E4%B8%AA%E6%8E%A8%E7%90%86%E5%89%A7%E9%81%87%E4%B8%8A%E6%97%A0%E9%99%90%E6%B5%81%E7%9A%84%E4%BE%8B%E5%AD%90/">一个推理剧遇上无限流的例子</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+
+
 </div>
       <footer id="footer">
     <div class="outer">
